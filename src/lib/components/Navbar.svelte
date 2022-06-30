@@ -2,6 +2,8 @@
 	import BellIcon from '$lib/assets/icons/BellIcon.svelte';
 	import SearchIcon from '$lib/assets/icons/SearchIcon.svelte';
 	import BurgerMenuIcon from '$lib/assets/icons/BurgerMenuIcon.svelte';
+	import AuroraIcon from '$lib/assets/icons/AuroraIcon.svelte';
+	import CreateAnkiCard from './CreateAnkiCard.svelte';
 </script>
 
 <div class="navbar bg-base-100 mb-4 px-0">
@@ -18,9 +20,10 @@
 		</div>
 	</div>
 	<div class="navbar-left">
-		<a class="btn btn-ghost normal-case text-xl">aurora</a>
+		<a class="btn btn-ghost normal-case text-xl flex gap-2">aurora</a>
 	</div>
 	<div class="navbar-end">
+		<CreateAnkiCard />
 		<button class="btn btn-ghost">
 			<SearchIcon />
 		</button>
