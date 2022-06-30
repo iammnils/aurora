@@ -1,9 +1,17 @@
 <script lang="ts">
-	import Card from '$lib/components/Card.svelte';
-	import CreateCard from '$lib/components/CreateCard.svelte';
+	import AnkiCard from '$lib/components/AnkiCard.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
+	import { cardStore } from '$lib/stores/cardStore';
+	import type { Card } from '$lib/types/types';
+
+	let card: Card;
+	let cards: Card[];
+
+	cardStore.subscribe((storedValue) => {
+		cards = storedValue;
+		card = cards[0];
+	});
 </script>
 
 <Navbar />
-<CreateCard />
-<Card />
+<AnkiCard {card} />
