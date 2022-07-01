@@ -2,16 +2,48 @@
 	import CreateFlipCard from '$lib/components/FlipCard/CreateFlipCard.svelte';
 
 	import FlipCard from '$lib/components/FlipCard/FlipCard.svelte';
+	import RemainingFlipCards from '$lib/components/FlipCard/CardIndicator.svelte';
 	import Navbar from '$lib/components/Navbar/Navbar.svelte';
 	import ToastList from '$lib/components/Toast/ToastList.svelte';
 	import { flipCardStore } from '$lib/stores/flipCardStore';
-	import type { Card } from '$lib/types/types';
+	import { deleteFlipCard } from '$lib/stores/flipCardStore';
+	import { addToast } from '$lib/stores/toastStore';
+	import { ToastType } from '$lib/types/types';
+	import { generateId } from '$lib/utils/generateId';
 
-	let flipCard: Card;
+	let isFlipped = false;
+	let currentCardIndex = 0;
+	$: displayedCard = $flipCardStore[currentCardIndex];
+	$: flipCards = $flipCardStore;
 
-	flipCardStore.subscribe((all) => {
-		flipCard = all[0];
-	});
+	function flip(): void {
+		isFlipped = !isFlipped;
+	}
+
+	function handleDelete(id: number) {
+		deleteFlipCard(id);
+		isFlipped = false;
+		if (currentCardIndex !== 0) {
+			currentCardIndex--;
+		}
+	}
+
+	function handleCardStatusChange(e: Event) {
+		console.log(e);
+
+		if (currentCardIndex === $flipCardStore.length - 1) {
+			addToast({
+				id: generateId(),
+				message: 'Deck end reached!',
+				type: ToastType.Info,
+				dismissible: true,
+				timeout: 2500
+			});
+			flip();
+			return;
+		}
+		currentCardIndex++;
+	}
 </script>
 
 <svelte:head>
@@ -22,7 +54,16 @@
 	<Navbar>
 		<CreateFlipCard />
 	</Navbar>
-	<FlipCard {flipCard} />
+	<FlipCard
+		flipCard={displayedCard}
+		{isFlipped}
+		on:flip={() => flip()}
+		on:status-difficult={(e) => handleCardStatusChange(e)}
+		on:status-just-fine={(e) => handleCardStatusChange(e)}
+		on:status-easy={(e) => handleCardStatusChange(e)}
+		on:delete={() => handleDelete(displayedCard.id)}
+	/>
+	<RemainingFlipCards {flipCards} {displayedCard} />
 </div>
 
 <ToastList />
