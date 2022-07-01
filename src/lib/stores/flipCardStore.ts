@@ -1,9 +1,10 @@
 import { CardStatus, type Card } from '$lib/types/types';
+import { generateId } from '$lib/utils/generateId';
 import { writable } from 'svelte/store';
 
 export const flipCardStore = writable<Card[]>([
 	{
-		id: Date.now() + Math.random(),
+		id: generateId(),
 		question: 'What is going on?',
 		solution: 'Nothing, but the finest!',
 		status: CardStatus.NotAssigned

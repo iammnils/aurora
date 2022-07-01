@@ -14,13 +14,17 @@ module.exports = {
 					accent: '#10ECB7',
 					'accent-focus': '#10ECB7',
 					'accent-content': '#000',
-					success: '#10ECB7',
-					'success-focus': '#10ECB7',
-					'success-content': '#000',
+					info: '#4361ee',
+					'info-focus': '#4361ee',
+					'info-content': '#fff',
+					success: '#14ddac',
+					'success-focus': '#14ddac',
+					'success-content': '#fff',
 					warning: '#fdc500',
 					'warning-focus': '#fdc500',
 					'warning-content': '#000',
-					error: '#ff6052'
+					error: '#ff6052',
+					'error-focus': '#ff6052'
 				}
 			}
 		]
