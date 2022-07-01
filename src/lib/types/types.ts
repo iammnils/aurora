@@ -11,3 +11,17 @@ export enum CardStatus {
 	JustFine = 'JUST FINE',
 	Easy = 'EASY'
 }
+
+export type Toast = {
+	id: number;
+	message: string;
+	type: ToastType;
+	dismissible: boolean;
+	timeout: number;
+};
+
+export enum ToastType {
+	Success = 'SUCCESS',
+	Info = 'INFO',
+	Error = 'WARNING'
+}
