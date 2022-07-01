@@ -4,5 +4,25 @@ module.exports = {
 	theme: {
 		extend: {}
 	},
-	plugins: [require('daisyui')]
+	plugins: [require('daisyui')],
+
+	daisyui: {
+		themes: [
+			{
+				light: {
+					...require('daisyui/src/colors/themes')['[data-theme=lofi]'],
+					accent: '#10ECB7',
+					'accent-focus': '#10ECB7',
+					'accent-content': '#000',
+					success: '#10ECB7',
+					'success-focus': '#10ECB7',
+					'success-content': '#000',
+					warning: '#fdc500',
+					'warning-focus': '#fdc500',
+					'warning-content': '#000',
+					error: '#ff6052'
+				}
+			}
+		]
+	}
 };

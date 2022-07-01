@@ -68,7 +68,9 @@
 				>
 					Cancel
 				</label>
-				<button class="btn justify-start" type="submit" on:click={handleCreate}>Create</button>
+				<button class="btn btn-accent justify-start" type="submit" on:click={handleCreate}
+					>Create</button
+				>
 			</div>
 		</form>
 	</div>

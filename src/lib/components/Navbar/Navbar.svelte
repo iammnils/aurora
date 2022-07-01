@@ -28,7 +28,7 @@
 		<button class="btn btn-ghost">
 			<div class="indicator">
 				<BellIcon />
-				<span class="badge badge-xs badge-primary indicator-item">1</span>
+				<span class="badge badge-xs badge-accent indicator-item">1</span>
 			</div>
 		</button>
 	</div>
