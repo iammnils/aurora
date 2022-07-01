@@ -17,7 +17,7 @@
 
 <div
 	class="alert sm:flex-row shadow-lg sm:gap-8 max-w-sm"
-	class:alert-warning={type === ToastType.Error}
+	class:alert-error={type === ToastType.Error}
 	class:alert-info={type === ToastType.Info}
 	class:alert-success={type === ToastType.Success}
 	role="alert"
