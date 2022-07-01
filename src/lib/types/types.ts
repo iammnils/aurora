@@ -6,10 +6,10 @@ export type Card = {
 };
 
 export enum CardStatus {
-	NotAssigned = 'not assigned',
-	Difficult = 'difficult',
-	JustFine = 'just fine',
-	Easy = 'easy'
+	NotAssigned = 'NOT ASSIGNED',
+	Difficult = 'DIFFICULT',
+	JustFine = 'JUST FINE',
+	Easy = 'EASY'
 }
 
 export type Toast = {
@@ -21,7 +21,7 @@ export type Toast = {
 };
 
 export enum ToastType {
-	Success = 'success',
-	Info = 'info',
-	Error = 'warning'
+	Success = 'SUCCESS',
+	Info = 'INFO',
+	Error = 'WARNING'
 }
