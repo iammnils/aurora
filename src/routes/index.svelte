@@ -1,17 +1,28 @@
 <script lang="ts">
-	import AnkiCard from '$lib/components/AnkiCard.svelte';
-	import Navbar from '$lib/components/Navbar.svelte';
-	import { cardStore } from '$lib/stores/cardStore';
+	import CreateFlipCard from '$lib/components/FlipCard/CreateFlipCard.svelte';
+
+	import FlipCard from '$lib/components/FlipCard/FlipCard.svelte';
+	import Navbar from '$lib/components/Navbar/Navbar.svelte';
+	import ToastList from '$lib/components/Toast/ToastList.svelte';
+	import { flipCardStore } from '$lib/stores/flipCardStore';
 	import type { Card } from '$lib/types/types';
 
-	let card: Card;
-	let cards: Card[];
+	let flipCard: Card;
 
-	cardStore.subscribe((storedValue) => {
-		cards = storedValue;
-		card = cards[0];
+	flipCardStore.subscribe((all) => {
+		flipCard = all[0];
 	});
 </script>
 
-<Navbar />
-<AnkiCard {card} />
+<svelte:head>
+	<title>aurora</title>
+</svelte:head>
+
+<div class="flex flex-col content-between w-full lg:w-2/4 md:w-3/4 sm:w-full px-5 py-5 h-screen">
+	<Navbar>
+		<CreateFlipCard />
+	</Navbar>
+	<FlipCard {flipCard} />
+</div>
+
+<ToastList />
