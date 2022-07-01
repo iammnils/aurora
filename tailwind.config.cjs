@@ -17,8 +17,8 @@ module.exports = {
 					success: '#10ECB7',
 					'success-focus': '#10ECB7',
 					'success-content': '#000',
-					warning: '#f9dc5c',
-					'warning-focus': '#f9dc5c',
+					warning: '#fdc500',
+					'warning-focus': '#fdc500',
 					'warning-content': '#000',
 					error: '#ff6052'
 				}

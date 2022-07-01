@@ -32,7 +32,7 @@
 				<h2 class="card-title">Solution</h2>
 				<p class="font-mono">{flipCard.solution}</p>
 				<div class="card-actions justify-start">
-					<button on:click={flip} class="btn btn-outline btn-warning w-full sm:w-32"
+					<button on:click={flip} class="btn btn-outline btn-error w-full sm:w-32"
 						>Difficult
 					</button>
 					<button on:click={flip} class="btn btn-outline w-full sm:w-32">Just Fine</button>
