@@ -15,6 +15,6 @@ export function addFlipCard(flipCard: Card) {
 	flipCardStore.update((all) => [...all, flipCard]);
 }
 
-export function deleteFlipCard(id: number): void {
+export function deleteFlipCard(id: number) {
 	flipCardStore.update((all) => all.filter((c) => c.id !== id));
 }
