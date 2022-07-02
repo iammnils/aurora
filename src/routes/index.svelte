@@ -1,6 +1,5 @@
 <script lang="ts">
 	import CreateFlipCard from '$lib/components/FlipCard/CreateFlipCard.svelte';
-
 	import FlipCard from '$lib/components/FlipCard/FlipCard.svelte';
 	import RemainingFlipCards from '$lib/components/FlipCard/CardIndicator.svelte';
 	import Navbar from '$lib/components/Navbar/Navbar.svelte';
@@ -42,6 +41,7 @@
 			flip();
 			return;
 		}
+		flip();
 		currentCardIndex++;
 	}
 </script>
