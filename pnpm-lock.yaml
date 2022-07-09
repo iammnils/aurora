@@ -17,14 +17,14 @@ specifiers:
   svelte: 3.48.0
   svelte-check: 2.8.0
   svelte-preprocess: 4.10.7
-  tailwindcss: 3.1.4
+  tailwindcss: 3.1.5
   tslib: 2.4.0
   typescript: 4.7.4
 
 devDependencies:
   '@playwright/test': 1.23.1
-  '@sveltejs/adapter-auto': 1.0.0-next.53
-  '@sveltejs/kit': 1.0.0-next.357_svelte@3.48.0
+  '@sveltejs/adapter-auto': 1.0.0-next.55
+  '@sveltejs/kit': 1.0.0-next.367_svelte@3.48.0
   '@typescript-eslint/eslint-plugin': 5.30.5_6zdoc3rn4mpiddqwhppni2mnnm
   '@typescript-eslint/parser': 5.30.5_4x5o4skxv6sl53vpwefgt23khm
   autoprefixer: 10.4.7_postcss@8.4.14
@@ -38,7 +38,7 @@ devDependencies:
   svelte: 3.48.0
   svelte-check: 2.8.0_s3dopqgs4h45owyu2kxaf6kyfu
   svelte-preprocess: 4.10.7_jr4mgafwdbjtobsadg2hrd5qfy
-  tailwindcss: 3.1.4
+  tailwindcss: 3.1.5
   tslib: 2.4.0
   typescript: 4.7.4
 
@@ -152,26 +152,26 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@sveltejs/adapter-auto/1.0.0-next.53:
-    resolution: {integrity: sha512-LyaeU0rkcymGWvV/3K26AZxqG/+ZQHwa+hrx3xsbmOykjQ2WQPTXRVwmH23zV4A5ABvni76LRMsQOoqWzP3G9Q==}
+  /@sveltejs/adapter-auto/1.0.0-next.55:
+    resolution: {integrity: sha512-Z/yin8+tXwq/a8rtDXB+H2HDoVVT16fZYphXHa3WAK+Z/OXwPoEiz9ZSWZYWxBKVFpvtH+IXijAPl1CPJnosxw==}
     dependencies:
-      '@sveltejs/adapter-cloudflare': 1.0.0-next.24
-      '@sveltejs/adapter-netlify': 1.0.0-next.66
-      '@sveltejs/adapter-vercel': 1.0.0-next.59
+      '@sveltejs/adapter-cloudflare': 1.0.0-next.26
+      '@sveltejs/adapter-netlify': 1.0.0-next.67
+      '@sveltejs/adapter-vercel': 1.0.0-next.60
     transitivePeerDependencies:
       - encoding
       - supports-color
     dev: true
 
-  /@sveltejs/adapter-cloudflare/1.0.0-next.24:
-    resolution: {integrity: sha512-g1QSrjWYjM6sfJB+pQn52EIfbVFjpk23GYsj5PLt2Gi3zRNfLRbpkFkPeyAOZbAfT4k/9lUqfLW+pkh+W3yxlg==}
+  /@sveltejs/adapter-cloudflare/1.0.0-next.26:
+    resolution: {integrity: sha512-70GQzX5iHedlWdvfdlBmS4qrIReocZem5TPOARF3yYQYCliMH2bd+dbcHt0sGugx73Gks11HxWj+/WpPw0LljA==}
     dependencies:
       esbuild: 0.14.47
       worktop: 0.8.0-next.14
     dev: true
 
-  /@sveltejs/adapter-netlify/1.0.0-next.66:
-    resolution: {integrity: sha512-UypTRnTd+R1O6SaDdc8l3A3c9/mQF8xLNoVb3Ay5ipb7uPU5WmjVYjfLVGyeVy67gztFfeFC/9Esu4OI2Ayx1A==}
+  /@sveltejs/adapter-netlify/1.0.0-next.67:
+    resolution: {integrity: sha512-0C4TlePu1grsY/rhYUiQUwU8pFK9ImvI0u/T8KpwwXAeMjmxCfZa8B1syil389iAykBoiKlx0mxIzT7tawwFzg==}
     dependencies:
       '@iarna/toml': 2.2.5
       esbuild: 0.14.47
@@ -179,8 +179,8 @@ packages:
       tiny-glob: 0.2.9
     dev: true
 
-  /@sveltejs/adapter-vercel/1.0.0-next.59:
-    resolution: {integrity: sha512-1lq5IFLWiLUXmNJVUXjwaInDb07BJg5er43xlMilpFpTA9BZI2hqjYCgtdtk7O6ee5EYJk876b2riM1m+y1M4Q==}
+  /@sveltejs/adapter-vercel/1.0.0-next.60:
+    resolution: {integrity: sha512-Xq+gaxQ2iKvP9G+7C8+r4xScMOUEhBouDEFyLCOzKrwmd+JWBzCl1N0qKeKm71MbR7l4YJn8J+e7105j8x+RXA==}
     dependencies:
       '@vercel/nft': 0.20.0
       esbuild: 0.14.47
@@ -189,27 +189,24 @@ packages:
       - supports-color
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.357_svelte@3.48.0:
-    resolution: {integrity: sha512-nCAehVybIEpQNnPu61V/EFVdfDb1nBSiQUfW9EcSSDEUbyAMCVBOKZZuzQ0qQDp3xniqRkyDzpBA4wN+ADxHBw==}
-    engines: {node: '>=16.7'}
+  /@sveltejs/kit/1.0.0-next.367_svelte@3.48.0:
+    resolution: {integrity: sha512-glilWol6iJEf8esQpH0HOzdI4n/xgZtoLa9U9sbg+BZelQXFRRglaGyw+ahjEreBH5MH3/bpIYAPPObQN8Pgbg==}
+    engines: {node: '>=16.9'}
     hasBin: true
     peerDependencies:
       svelte: ^3.44.0
+      vite: ^2.9.10
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.49_svelte@3.48.0+vite@2.9.12
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.49_svelte@3.48.0
       chokidar: 3.5.3
       sade: 1.8.1
       svelte: 3.48.0
-      vite: 2.9.12
     transitivePeerDependencies:
       - diff-match-patch
-      - less
-      - sass
-      - stylus
       - supports-color
     dev: true
 
-  /@sveltejs/vite-plugin-svelte/1.0.0-next.49_svelte@3.48.0+vite@2.9.12:
+  /@sveltejs/vite-plugin-svelte/1.0.0-next.49_svelte@3.48.0:
     resolution: {integrity: sha512-AKh0Ka8EDgidnxWUs8Hh2iZLZovkETkefO99XxZ4sW4WGJ7VFeBx5kH/NIIGlaNHLcrIvK3CK0HkZwC3Cici0A==}
     engines: {node: ^14.13.1 || >= 16}
     peerDependencies:
@@ -227,7 +224,6 @@ packages:
       magic-string: 0.26.2
       svelte: 3.48.0
       svelte-hmr: 0.14.12_svelte@3.48.0
-      vite: 2.9.12
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -699,7 +695,7 @@ packages:
       css-selector-tokenizer: 0.8.0
       postcss: 8.4.14
       postcss-js: 4.0.0_postcss@8.4.14
-      tailwindcss: 3.1.4
+      tailwindcss: 3.1.5
     transitivePeerDependencies:
       - ts-node
     dev: true
@@ -1875,9 +1871,9 @@ packages:
       postcss: 8.4.14
     dev: true
 
-  /postcss-load-config/3.1.4_postcss@8.4.14:
-    resolution: {integrity: sha512-6DiM4E7v4coTE4uzA8U//WhtPwyhiim3eyjEMFCnUpzbrkK9wJHgKDT2mR+HbtSrd/NubVaYTOpSpjUl8NQeRg==}
-    engines: {node: '>= 10'}
+  /postcss-load-config/4.0.1_postcss@8.4.14:
+    resolution: {integrity: sha512-vEJIc8RdiBRu3oRAI0ymerOn+7rPuMvRXslTvZUKZonDHFIczxztIyJ1urxM1x9JXEikvpWWTUUqal5j/8QgvA==}
+    engines: {node: '>= 14'}
     peerDependencies:
       postcss: '>=8.0.9'
       ts-node: '>=9.0.0'
@@ -1889,7 +1885,7 @@ packages:
     dependencies:
       lilconfig: 2.0.5
       postcss: 8.4.14
-      yaml: 1.10.2
+      yaml: 2.1.1
     dev: true
 
   /postcss-nested/5.0.6_postcss@8.4.14:
@@ -2058,14 +2054,6 @@ packages:
     resolution: {integrity: sha512-EEp9NhnUkwY8aif6bxgovPHMoMoNr2FulJziTndpt5H9RdwC47GSGuII9XxpSdzVGM0GWrNPHV6ie1LTNJPaLQ==}
     dependencies:
       estree-walker: 0.6.1
-    dev: true
-
-  /rollup/2.75.7:
-    resolution: {integrity: sha512-VSE1iy0eaAYNCxEXaleThdFXqZJ42qDBatAwrfnPlENEZ8erQ+0LYX4JXOLPceWfZpV1VtZwZ3dFCuOZiSyFtQ==}
-    engines: {node: '>=10.0.0'}
-    hasBin: true
-    optionalDependencies:
-      fsevents: 2.3.2
     dev: true
 
   /run-parallel/1.2.0:
@@ -2345,8 +2333,8 @@ packages:
     engines: {node: '>= 8'}
     dev: true
 
-  /tailwindcss/3.1.4:
-    resolution: {integrity: sha512-NrxbFV4tYsga/hpWbRyUfIaBrNMXDxx5BsHgBS4v5tlyjf+sDsgBg5m9OxjrXIqAS/uR9kicxLKP+bEHI7BSeQ==}
+  /tailwindcss/3.1.5:
+    resolution: {integrity: sha512-bC/2dy3dGPqxMWAqFSRgQxVCfmO/31ZbeEp8s9DMDh4zgPZ5WW1gxRJkbBkXcTUIzaSUdhWrcsrSOe32ccgB4w==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     dependencies:
@@ -2366,7 +2354,7 @@ packages:
       postcss: 8.4.14
       postcss-import: 14.1.0_postcss@8.4.14
       postcss-js: 4.0.0_postcss@8.4.14
-      postcss-load-config: 3.1.4_postcss@8.4.14
+      postcss-load-config: 4.0.1_postcss@8.4.14
       postcss-nested: 5.0.6_postcss@8.4.14
       postcss-selector-parser: 6.0.10
       postcss-value-parser: 4.2.0
@@ -2484,30 +2472,6 @@ packages:
     resolution: {integrity: sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==}
     dev: true
 
-  /vite/2.9.12:
-    resolution: {integrity: sha512-suxC36dQo9Rq1qMB2qiRorNJtJAdxguu5TMvBHOc/F370KvqAe9t48vYp+/TbPKRNrMh/J55tOUmkuIqstZaew==}
-    engines: {node: '>=12.2.0'}
-    hasBin: true
-    peerDependencies:
-      less: '*'
-      sass: '*'
-      stylus: '*'
-    peerDependenciesMeta:
-      less:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-    dependencies:
-      esbuild: 0.14.47
-      postcss: 8.4.14
-      resolve: 1.22.1
-      rollup: 2.75.7
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: true
-
   /webidl-conversions/3.0.1:
     resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
     dev: true
@@ -2563,7 +2527,7 @@ packages:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
     dev: true
 
-  /yaml/1.10.2:
-    resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
-    engines: {node: '>= 6'}
+  /yaml/2.1.1:
+    resolution: {integrity: sha512-o96x3OPo8GjWeSLF+wOAbrPfhFOGY0W00GNaxCDv+9hkcDJEnev1yh8S7pgHF0ik6zc8sQLuL8hjHjJULZp8bw==}
+    engines: {node: '>= 14'}
     dev: true
