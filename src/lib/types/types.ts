@@ -1,7 +1,8 @@
 export type Card = {
-	id: number;
+	id: string;
 	question: string;
 	solution: string;
+	deckSelectionId: string;
 	status: CardStatus;
 };
 
@@ -13,7 +14,7 @@ export enum CardStatus {
 }
 
 export type Toast = {
-	id: number;
+	id: string;
 	message: string;
 	type: ToastType;
 	dismissible: boolean;
@@ -25,3 +26,8 @@ export enum ToastType {
 	Info = 'INFO',
 	Error = 'WARNING'
 }
+
+export type CardDeck = {
+	id: string;
+	title: string;
+};

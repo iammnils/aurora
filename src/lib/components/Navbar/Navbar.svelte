@@ -1,27 +1,23 @@
 <script>
 	import BellIcon from '$lib/assets/icons/BellIcon.svelte';
 	import SearchIcon from '$lib/assets/icons/SearchIcon.svelte';
-	import BurgerMenuIcon from '$lib/assets/icons/BurgerMenuIcon.svelte';
+	import DeckIcon from '$lib/assets/icons/DeckIcon.svelte';
 </script>
 
-<nav class="navbar bg-base-100 mb-4 px-0">
+<nav class="navbar bg-base-100 mb-20 px-0">
 	<div class="navbar-start">
 		<div class="dropdown">
-			<button class="btn btn-ghost">
-				<BurgerMenuIcon />
-			</button>
-			<ul class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-				<li tabindex="0"><a>Homepage</a></li>
-				<li tabindex="0"><a>Portfolio</a></li>
-				<li tabindex="0"><a>About</a></li>
-			</ul>
+			<a href="/" class="btn btn-ghost">
+				<DeckIcon />
+			</a>
+			<slot name="slot-2-left" />
 		</div>
 	</div>
 	<div class="navbar-left">
 		<a href="/" class="btn btn-ghost normal-case text-xl flex gap-2">aurora</a>
 	</div>
 	<div class="navbar-end">
-		<slot />
+		<slot name="slot-1-right" />
 		<button class="btn btn-ghost">
 			<SearchIcon />
 		</button>
