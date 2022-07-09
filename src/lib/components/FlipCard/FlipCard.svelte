@@ -10,15 +10,18 @@
 	let cardTitle: string;
 	let cardContent: string;
 
-	$: if (flipCard) cardTitle = !isFlipped ? 'Question' : 'Solution';
-	$: if (flipCard) cardContent = !isFlipped ? flipCard.question : flipCard.solution;
+	$: if (flipCard) {
+		cardTitle = !isFlipped ? 'Question' : 'Solution';
+		cardContent = !isFlipped ? flipCard.question : flipCard.solution;
+	}
 </script>
 
 {#if flipCard}
 	<div class="card bg-base-100 border my-6">
 		<div class="card-body flex gap-5">
 			<h2 class="card-title">{cardTitle}</h2>
-			<p class="font-mono">{cardContent}</p>
+			<hr />
+			<p class="font-mono sm:mb-20">{cardContent}</p>
 			<div class="card-actions justify-start">
 				{#if !isFlipped}
 					<button on:click={() => dispatch('flip')} class="btn btn-outline">Check Solution</button>

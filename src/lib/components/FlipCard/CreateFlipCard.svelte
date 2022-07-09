@@ -1,12 +1,14 @@
 <script lang="ts">
 	import PlusIcon from '$lib/assets/icons/PlusIcon.svelte';
 	import { addFlipCard } from '$lib/stores/flipCardStore';
-	import { CardStatus, ToastType } from '$lib/types/types';
+	import { CardStatus, ToastType, type CardDeck } from '$lib/types/types';
 	import { addToast } from '$lib/stores/toastStore';
 	import { generateId } from '$lib/utils/generateId';
 
 	let question: string;
 	let solution: string;
+	let deckSelectionId: string;
+	export let decks: CardDeck[];
 
 	function clearForm() {
 		question = '';
@@ -14,7 +16,7 @@
 	}
 
 	function handleCreate() {
-		if (!question || !solution) {
+		if (!question || !solution || !deckSelectionId) {
 			addToast({
 				id: generateId(),
 				message: 'Please fill-in the all fields!',
@@ -25,7 +27,13 @@
 			return;
 		}
 
-		addFlipCard({ id: generateId(), question, solution, status: CardStatus.NotAssigned });
+		addFlipCard({
+			id: generateId(),
+			question,
+			solution,
+			deckSelectionId,
+			status: CardStatus.NotAssigned
+		});
 		clearForm();
 		addToast({
 			id: generateId(),
@@ -44,20 +52,28 @@
 	<div class="modal-box">
 		<form on:submit|preventDefault class="form-control">
 			<label class="flex flex-col font-bold gap-2 label-text">
-				Enter your question
+				Question
 				<textarea
 					class="textarea textarea-bordered font-mono font-normal h-24 mb-4"
-					placeholder="Your question goes here ..."
+					placeholder="What is a Singleton Pattern?"
 					bind:value={question}
 				/>
 			</label>
 			<label class="flex flex-col font-bold gap-2 label-text">
-				Enter your Solution
+				Solution
 				<textarea
-					class="textarea textarea-bordered font-mono font-normal h-24"
-					placeholder="And your solution goes here ..."
+					class="textarea textarea-bordered font-mono font-normal h-24 mb-4"
+					placeholder="Singleton is a design pattern that ensures that a class has only one immutable instance."
 					bind:value={solution}
 				/>
+			</label>
+			<label class="flex flex-col font-bold gap-2 label-text">
+				Select a deck
+				<select class="select select-bordered font-mono font-normal" bind:value={deckSelectionId}>
+					{#each decks as deck (deck.id)}
+						<option value={deck.id}>{deck.title}</option>
+					{/each}}
+				</select>
 			</label>
 			<div class="modal-action">
 				<label
